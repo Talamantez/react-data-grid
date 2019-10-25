@@ -112,7 +112,7 @@ export default class Canvas<R> extends React.PureComponent<CanvasProps<R>> {
     }
   };
 
-  handleHitColummBoundary = ({ idx }: Position) => {
+  handleHitColumnBoundary = ({ idx }: Position) => {
     this.scrollToColumn(idx);
   };
 
@@ -353,8 +353,8 @@ export default class Canvas<R> extends React.PureComponent<CanvasProps<R>> {
           contextMenu={this.props.contextMenu}
           onHitBottomBoundary={this.onHitBottomCanvas}
           onHitTopBoundary={this.onHitTopCanvas}
-          onHitLeftBoundary={this.handleHitColummBoundary}
-          onHitRightBoundary={this.handleHitColummBoundary}
+          onHitLeftBoundary={this.handleHitColumnBoundary}
+          onHitRightBoundary={this.handleHitColumnBoundary}
           scrollLeft={this._scroll.scrollLeft}
           scrollTop={this._scroll.scrollTop}
           getRowHeight={this.getRowHeight}

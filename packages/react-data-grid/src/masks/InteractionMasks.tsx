@@ -6,7 +6,6 @@ import SelectionMask from './SelectionMask';
 import SelectionRangeMask from './SelectionRangeMask';
 import CopyMask from './CopyMask';
 import DragMask, { DraggedPosition } from './DragMask';
-import DragHandle from './DragHandle';
 import EditorContainer from '../common/editors/EditorContainer';
 import EditorPortal from '../common/editors/EditorPortal';
 
@@ -644,13 +643,6 @@ export default class InteractionMasks<R> extends React.Component<InteractionMask
           {...this.getSelectedDimensions(this.state.selectedPosition, true)}
           ref={this.selectionMask}
         >
-          {this.isDragEnabled() && (
-            <DragHandle
-              onDragStart={this.handleDragStart}
-              onDragEnd={this.handleDragEnd}
-              onDoubleClick={this.onDragHandleDoubleClick}
-            />
-          )}
         </SelectionMask>
       )
     );
